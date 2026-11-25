@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Advertise · Whitestep</title>
+<meta name="description" content="Reach people actively looking to buy a home in Bermuda. Sponsor placements on Whitestep.">
+<meta name="theme-color" content="#12343B">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="advertise">
+<div id="site-nav"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Reach people who are buying a home in Bermuda</h1>
+    <p>Whitestep visitors are setting a budget and comparing homes. Sponsor placements put your business in front of them at the moment they need a lender, lawyer, mover or insurer.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="page-body">
+    <div class="panel">
+      <h2>Sponsor placements</h2>
+      <table class="price-table">
+        <thead><tr><th>Placement</th><th>Where it appears</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Search sponsor</strong></td><td>A card in the home results, shown between listings and clearly labelled “Sponsored”.</td></tr>
+          <tr><td><strong>Category sponsor</strong></td><td>One business per category, such as mortgages or conveyancing, appearing in every results page.</td></tr>
+          <tr><td><strong>Agency feature</strong></td><td>For listing agencies: your homes highlighted at the top of matching searches.</td></tr>
+        </tbody>
+      </table>
+      <h3>Good fits</h3>
+      <ul>
+        <li>Banks and mortgage lenders</li>
+        <li>Conveyancing and property lawyers</li>
+        <li>Home inspectors, surveyors and contractors</li>
+        <li>Insurers, movers and furniture stores</li>
+      </ul>
+      <h3>Our standards</h3>
+      <p>Every ad is labelled as sponsored, uses no tracking cookies, and never sits on top of the listings. We don't accept ads that compete with the homes themselves, such as other property portals.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Ask about advertising</h2>
+      <form class="form" id="ad-form">
+        <div class="row">
+          <label>Your name<input name="Name" required autocomplete="name"></label>
+          <label>Business<input name="Business" required autocomplete="organization"></label>
+        </div>
+        <div class="row">
+          <label>Email<input name="Email" type="email" required autocomplete="email"></label>
+          <label>Phone<input name="Phone" type="tel" autocomplete="tel" placeholder="441"></label>
+        </div>
+        <label>What are you interested in?
+          <select name="Placement"><option>Search sponsor</option><option>Category sponsor</option><option>Agency feature</option><option>Not sure yet</option></select>
+        </label>
+        <label>Your website<input name="Website" type="url" placeholder="https://"></label>
+        <label>Message<textarea name="Message" placeholder="Tell us what you'd like to promote"></textarea></label>
+        <button class="btn" type="submit">Send enquiry</button>
+        <p class="hint">We reply within two working days with availability and rates.</p>
+        <div class="form-ok" role="status"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="site-foot"></div>
+<script src="config.js"></script>
+<script src="site.js"></script>
+<script>WhitestepForm(document.getElementById("ad-form"), "Whitestep advertising enquiry");</script>
+</body>
+</html>

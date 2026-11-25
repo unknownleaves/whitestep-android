@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>List your properties · Whitestep</title>
+<meta name="description" content="Bermuda agencies can list their homes for sale on Whitestep for free.">
+<meta name="theme-color" content="#12343B">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="agents">
+<div id="site-nav"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Put your listings in front of every Bermuda buyer</h1>
+    <p>Whitestep shows homes from every agency side by side, so buyers can find yours by budget, parish and size. Each listing links straight back to you.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="page-body">
+    <div class="panel">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><b>1</b><div><strong>Tell us about your agency</strong><p>Fill in the form and we'll confirm the details with you.</p></div></li>
+        <li><b>2</b><div><strong>Send your listings</strong><p>Share a feed, a spreadsheet, or your website's listing pages. We keep price, status and bedrooms in step with you every day.</p></div></li>
+        <li><b>3</b><div><strong>Buyers contact you</strong><p>Every home links to your own listing page, so enquiries come to you, not to us.</p></div></li>
+      </ol>
+      <h3>What buyers see</h3>
+      <ul>
+        <li>Price, parish, bedrooms and bathrooms</li>
+        <li>Your agency name on every listing</li>
+        <li>Only homes that are still available. Mark a home under offer or under contract and it comes down the same day.</li>
+      </ul>
+      <h3>Cost</h3>
+      <p>Listing your homes is free. Agencies can also sponsor featured placement; see <a href="advertise.html">advertising options</a>.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Join as a listing agency</h2>
+      <form class="form" id="agent-form">
+        <div class="row">
+          <label>Your name<input name="Name" required autocomplete="name"></label>
+          <label>Agency<input name="Agency" required autocomplete="organization"></label>
+        </div>
+        <div class="row">
+          <label>Email<input name="Email" type="email" required autocomplete="email"></label>
+          <label>Phone<input name="Phone" type="tel" autocomplete="tel" placeholder="441"></label>
+        </div>
+        <label>How many homes do you have for sale?
+          <select name="Listings"><option>1 to 10</option><option>11 to 30</option><option>31 to 75</option><option>More than 75</option></select>
+        </label>
+        <label>Where can we find your listings?<input name="Listings link" placeholder="Website, feed or spreadsheet link"></label>
+        <label>Anything else we should know?<textarea name="Notes"></textarea></label>
+        <label style="flex-direction:row;align-items:flex-start;gap:10px;font-weight:500;color:#3A4B4E">
+          <input type="checkbox" name="Permission" value="Yes" required style="margin-top:4px">
+          I confirm my agency is permitted to share these listings and agrees to them being shown on Whitestep.
+        </label>
+        <button class="btn" type="submit">Send details</button>
+        <div class="form-ok" role="status"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="site-foot"></div>
+<script src="config.js"></script>
+<script src="site.js"></script>
+<script>WhitestepForm(document.getElementById("agent-form"), "Whitestep listing agency enquiry");</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy · Whitestep</title>
+<meta name="theme-color" content="#12343B">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="privacy">
+<div id="site-nav"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Privacy</h1>
+    <p>Whitestep is built to be used without an account and without tracking.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="panel prose" style="margin-top:-34px">
+    <h2>What stays on your device</h2>
+    <p>Your saved homes and your last search filters are stored in your own browser so they're there next time. They never leave your device, and you can remove them by clearing your browser's site data.</p>
+
+    <h2>What we receive</h2>
+    <p>If you send us the agency or advertising form, we receive the details you type in, and use them only to reply to you. We don't sell or share them.</p>
+
+    <h2>Advertising</h2>
+    <p>Sponsored cards are plain links to the sponsor's website. They don't use cookies or track you across sites. When you click one, the sponsor's own privacy policy applies.</p>
+
+    <h2>Listings</h2>
+    <p>Listings are supplied by Bermuda real estate agencies. When you open a listing, you go to the agency's page, and its privacy policy applies there.</p>
+
+    <h2>Fonts</h2>
+    <p>Text is displayed with Google Fonts, so your browser requests the font files from Google.</p>
+
+    <h2>Questions</h2>
+    <p>Email <a id="pmail" href="#"></a> about anything on this page.</p>
+  </div>
+</div>
+
+<div id="site-foot"></div>
+<script src="config.js"></script>
+<script src="site.js"></script>
+<script>const m=document.getElementById("pmail");m.textContent=WHITESTEP.contactEmail;m.href="mailto:"+WHITESTEP.contactEmail;</script>
+</body>
+</html>
