@@ -57,8 +57,16 @@ jobs:
           name: whitestep-apk
           path: dist/*.apk
 
-      - name: Attach to GitHub Release
-        if: startsWith(github.ref, 'refs/tags/v')
+      - name: Publish GitHub Release
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || format('build-{0}', github.run_number) }}
+          name: ${{ startsWith(github.ref, 'refs/tags/v') && format('Whitestep {0}', github.ref_name) || format('Whitestep build {0}', github.run_number) }}
+          target_commitish: ${{ github.sha }}
+          make_latest: true
+          body: |
+            Android app for Whitestep · Bermuda homes for sale.
+            Download **whitestep-debug.apk** below on your phone and open it to install
+            (allow "Install unknown apps" when Android asks).
           files: dist/*.apk

@@ -10,17 +10,14 @@ works the same as the site: search, filters, saved homes and enquiry forms.
 
 ## Getting the APK
 
-Every push to `main` builds the app on GitHub:
+Every push to `main` builds the app on GitHub and publishes it as a Release.
+The newest APK is always at:
 
-1. Open the repo's **Actions** tab and click the latest **Build Android APK** run.
-2. Download **whitestep-apk** under *Artifacts* and unzip it.
-3. Copy `whitestep-debug.apk` to the phone and open it (allow "Install unknown apps" when asked).
+**https://github.com/unknownleaves/whitestep-android/releases/latest/download/whitestep-debug.apk**
 
-Push a tag such as `v1.0.0` and the APK is also attached to a GitHub Release:
-
-```bash
-git tag v1.0.0 && git push origin v1.0.0
-```
+Open that link on an Android phone, then open the downloaded file to install
+(allow "Install unknown apps" when asked). Pushing a tag such as `v1.0.0`
+publishes a release under that version name instead.
 
 ## Signed release build (for Google Play or long-term installs)
 
